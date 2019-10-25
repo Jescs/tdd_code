@@ -1,5 +1,6 @@
 from selenium import webdriver
 import unittest
+import time
 
 
 class NewVisitorTest(unittest.TestCase):
@@ -11,7 +12,8 @@ class NewVisitorTest(unittest.TestCase):
 
     def test_can_start_a_list_and_retrieve_it_later(self):
         self.browser.get('http://localhost:8000')
-        self.assertIn('To-DO', self.browser.title)  # "Browser title was " + browser.title
+
+        self.assertIn('To-Do', self.browser.title)  # "Browser title was " + browser.title
         self.fail('Finish the test!')
 
 
